@@ -1,0 +1,152 @@
+{
+  // General
+  "editor.matchBrackets": false,
+  "editor.occurrencesHighlight": false,
+  "editor.overviewRulerBorder": false,
+  "editor.tabCompletion": "on",
+  "editor.lineHeight": 26,
+  "editor.tabSize": 2,
+  "editor.snippetSuggestions": "top",
+  "editor.minimap.enabled": false,
+  "editor.cursorBlinking": "smooth",
+  "editor.folding": false,
+  "editor.renderIndentGuides": false,
+  "editor.wordWrap": "on",
+  "editor.lineNumbers": "on",
+  "editor.cursorStyle": "line",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "guides.normal.width": 2,
+  "explorer.openEditors.visible": 0,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  // Fonts
+  "editor.fontFamily": "Dank Mono, Operator Mono, Fira Code iScript, Fira Code",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  // custom css
+  "vscode_custom_css.imports": ["/Users/rgomesfindmore/.vscodestyles.css"],
+  // window
+  "window.zoomLevel": 0.2,
+  "window.restoreFullscreen": true,
+  "window.openFoldersInNewWindow": "off",
+  //Files
+  "files.defaultLanguage": "javascript",
+  "files.trimTrailingWhitespace": true,
+  "files.autoSave": "onFocusChange",
+  "files.insertFinalNewline": true,
+  "files.exclude": {
+    ".idea": true,
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.hg": true,
+    "**/.svn": true,
+    "**/CVS": true,
+    "package-lock.json": true,
+    "vendor": true
+  },
+  // workbench
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.editor.showIcons": false,
+  "workbench.panel.defaultLocation": "right",
+  "workbench.activityBar.visible": true,
+  "workbench.statusBar.feedback.visible": false,
+  "workbench.colorTheme": "Winter is Coming (Dark)",
+  "workbench.iconTheme": "vscode-great-icons",
+  "workbench.fontAliasing": "antialiased",
+  // terminal
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.fontSize": 14,
+  // Vetur
+  "vetur.validation.template": false,
+  "vetur.completion.useScaffoldSnippets": false,
+  // Eslint
+  "eslint.packageManager": "npm",
+  "eslint.options": {
+    "configFile": ".eslintrc.js"
+  },
+  "eslint.validate": [
+    {
+      "language": "vue",
+      "autoFix": true
+    },
+    {
+      "language": "html",
+      "autoFix": true
+    },
+    {
+      "language": "css",
+      "autoFix": true
+    },
+    {
+      "language": "scss",
+      "autoFix": true
+    },
+    {
+      "language": "javascript",
+      "autoFix": true
+    }
+  ],
+  "eslint.autoFixOnSave": true,
+  // Emmet
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.includeLanguages": {
+    "xml": "xml",
+    "html": "html"
+  },
+  // Zen
+  "zenMode.fullScreen": false,
+  "zenMode.restore": true,
+  "zenMode.centerLayout": false,
+  // Prettier
+  "extensions.autoUpdate": true,
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.eslintIntegration": true,
+  "prettier.stylelintIntegration": true,
+  "prettier.disableLanguages": [],
+  // vsicons
+  "vsicons.presets.foldersAllDefaultIcon": true,
+  // plugins
+  "typescript.check.npmIsInstalled": false,
+  "search.smartCase": true,
+  "search.exclude": {
+    "**/.idea": true,
+    "**/bower_components": true,
+    "**/coverage": true,
+    "**/docs": true,
+    "**/node_modules": true,
+    "**/python": true
+  },
+  "newFile.defaultFileExtension": ".js",
+  "newFile.showPathRelativeTo": "project",
+  "code-runner.runInTerminal": false,
+  "code-runner.clearPreviousOutput": true,
+  "code-runner.executorMap": {
+    "javascript": "node"
+  },
+  "todohighlight.isEnable": true,
+  "todohighlight.exclude": [
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "**/dist/**",
+    "**/build/**",
+    "**/.vscode/**",
+    "**/.github/**",
+    "**/_output/**",
+    "**/*.min.*",
+    "**/*.map",
+    "**/.next/**",
+    "**/docs/**",
+    "**/apidocs/**",
+    "**/jsdocs/**"
+  ],
+  "markdown-pdf.highlightStyle": "dracula.css",
+  "terminal.integrated.lineHeight": 1.2,
+  // Disable built in linters since we have eslint and style lint integrated with prettier
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "colorize.ignore_search_variables_info": true
+}
