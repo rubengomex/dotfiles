@@ -4,7 +4,7 @@
 # Vars
 export EDITOR="nvim"
 export SUDO_EDITOR='nvim'
-export SHELL="zsh"
+export SHELL="/bin/zsh"
 export NVM_DIR="$HOME/.nvm"
 DEFAULT_USER="rgodev"
 
