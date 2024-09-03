@@ -1,34 +1,46 @@
 {
   // General
-  "editor.matchBrackets": false,
-  "editor.occurrencesHighlight": false,
-  "editor.overviewRulerBorder": false,
+  "editor.matchBrackets": "always",
+  "editor.occurrencesHighlight": "off",
+  "editor.overviewRulerBorder": true,
   "editor.tabCompletion": "on",
-  "editor.lineHeight": 26,
+  "editor.lineHeight": 23,
   "editor.tabSize": 2,
   "editor.snippetSuggestions": "top",
   "editor.minimap.enabled": false,
   "editor.cursorBlinking": "smooth",
-  "editor.folding": false,
-  "editor.renderIndentGuides": false,
+  "editor.folding": true,
   "editor.wordWrap": "on",
   "editor.lineNumbers": "on",
   "editor.cursorStyle": "line",
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
-  "guides.normal.width": 2,
-  "explorer.openEditors.visible": 0,
+  "editor.formatOnPaste": false,
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[terraform]": {
+    "editor.formatOnSave": false
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "always",
+    "source.organizeImports": "always"
+  },
+  "guides.normal.width": 1,
+  "explorer.openEditors.visible": 1,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
-  "javascript.updateImportsOnFileMove.enabled": "never",
   // Fonts
-  "editor.fontFamily": "Dank Mono, Operator Mono, Fira Code iScript, Fira Code",
+  "editor.fontFamily": "Cascadia Code, Operator Mono, Dank Mono, Fira Code iScript, Fira Code",
   "editor.fontLigatures": true,
-  "editor.fontSize": 14,
-  // custom css
-  "vscode_custom_css.imports": ["/Users/rgomesfindmore/.vscodestyles.css"],
-  // window
-  "window.zoomLevel": 0.2,
+  "editor.fontSize": 15,
   "window.restoreFullscreen": true,
   "window.openFoldersInNewWindow": "off",
   //Files
@@ -43,71 +55,33 @@
     "**/.hg": true,
     "**/.svn": true,
     "**/CVS": true,
-    "package-lock.json": true,
-    "vendor": true
+    "vendor": true,
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
   },
   // workbench
   "workbench.startupEditor": "newUntitledFile",
   "workbench.editor.showIcons": false,
   "workbench.panel.defaultLocation": "right",
-  "workbench.activityBar.visible": true,
-  "workbench.statusBar.feedback.visible": false,
-  "workbench.colorTheme": "Winter is Coming (Dark)",
-  "workbench.iconTheme": "vscode-great-icons",
   "workbench.fontAliasing": "antialiased",
   // terminal
   "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.fontSize": 14,
-  // Vetur
-  "vetur.validation.template": false,
-  "vetur.completion.useScaffoldSnippets": false,
-  // Eslint
-  "eslint.packageManager": "npm",
-  "eslint.options": {
-    "configFile": ".eslintrc.js"
-  },
-  "eslint.validate": [
-    {
-      "language": "vue",
-      "autoFix": true
-    },
-    {
-      "language": "html",
-      "autoFix": true
-    },
-    {
-      "language": "css",
-      "autoFix": true
-    },
-    {
-      "language": "scss",
-      "autoFix": true
-    },
-    {
-      "language": "javascript",
-      "autoFix": true
-    }
-  ],
-  "eslint.autoFixOnSave": true,
   // Emmet
   "emmet.triggerExpansionOnTab": true,
   "emmet.includeLanguages": {
-    "xml": "xml",
-    "html": "html"
+    "html": "html",
+    "javascript": "javascriptreact",
+    "typescriptreact": "typescriptreact"
   },
+  "tailwindCSS.emmetCompletions": true,
   // Zen
   "zenMode.fullScreen": false,
   "zenMode.restore": true,
   "zenMode.centerLayout": false,
-  // Prettier
   "extensions.autoUpdate": true,
-  "prettier.semi": false,
-  "prettier.singleQuote": true,
-  "prettier.eslintIntegration": true,
-  "prettier.stylelintIntegration": true,
-  "prettier.disableLanguages": [],
-  // vsicons
-  "vsicons.presets.foldersAllDefaultIcon": true,
   // plugins
   "typescript.check.npmIsInstalled": false,
   "search.smartCase": true,
@@ -118,13 +92,6 @@
     "**/docs": true,
     "**/node_modules": true,
     "**/python": true
-  },
-  "newFile.defaultFileExtension": ".js",
-  "newFile.showPathRelativeTo": "project",
-  "code-runner.runInTerminal": false,
-  "code-runner.clearPreviousOutput": true,
-  "code-runner.executorMap": {
-    "javascript": "node"
   },
   "todohighlight.isEnable": true,
   "todohighlight.exclude": [
@@ -142,11 +109,75 @@
     "**/apidocs/**",
     "**/jsdocs/**"
   ],
-  "markdown-pdf.highlightStyle": "dracula.css",
-  "terminal.integrated.lineHeight": 1.2,
+  "terminal.integrated.lineHeight": 1.4,
   // Disable built in linters since we have eslint and style lint integrated with prettier
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
-  "colorize.ignore_search_variables_info": true
+  "breadcrumbs.enabled": true,
+  "editor.suggestSelection": "first",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "terminal.integrated.profiles.osx": {
+    "zsh": { "path": "zsh", "args": ["-l"] }
+  },
+  "prettier.printWidth": 120,
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "none",
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.iconTheme": "catppuccin-mocha",
+  "workbench.colorCustomizations": {
+    "[Winter is Coming (Dark Blue)]": {
+      "editor.background": "#131418",
+      "activityBar.background": "#131418",
+      "sideBar.background": "#131418",
+      "terminal.background": "#131418"
+    }
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "python.languageServer": "Default",
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "ts"
+  },
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook",
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "editor.accessibilitySupport": "off",
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "source": "Git Bash"
+    },
+    "Ubuntu (WSL)": {
+      "path": "C:\\WINDOWS\\System32\\wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu"
+      ]
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "Ubuntu (WSL)",
+  "window.zoomLevel": -1,
 }
